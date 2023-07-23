@@ -1,0 +1,21 @@
+.btn {
+  font-size: 1.6rem;
+  width: 4rem;
+  height: 4rem;
+  /* padding: 1rem 2rem; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primaryBackgroundColor);
+}
+
+.btn:active {
+  transform: scale(0.9);
+}

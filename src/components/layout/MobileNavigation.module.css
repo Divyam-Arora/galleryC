@@ -1,0 +1,126 @@
+.container {
+  grid-column: 1/-1;
+  display: none;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  background-color: var(--primaryBackgroundColor);
+  background-color: var(--shade1);
+  background-color: #fff;
+  /* border-top: 1px solid #ddd; */
+  box-shadow: 0 -5px 20px rgb(0, 0, 0, 0.1);
+}
+
+.list li a {
+  display: flex;
+  overflow: hidden;
+}
+
+.item {
+  display: flex;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+  padding: 3rem;
+  color: var(--secondaryBackgroundColor);
+  transition: 0.1s;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.item > * {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 0.2s;
+}
+
+/* .active .item,
+div.active {
+  color: var(--primaryColor) !important;
+  transform: scale(1.2);
+} */
+
+.active .item > span,
+div.active > span {
+  color: var(--primaryColor) !important;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+div.active.more > span {
+  transform: translate(-50%, -50%) scale(1.2) rotate(135deg);
+}
+
+.extra {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.extra > span {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  padding: 0.5rem;
+  display: flex;
+  border-radius: 50%;
+  color: var(--secondaryColor);
+  background-color: rgb(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.1);
+}
+
+div.active.more .extra > span {
+  top: 0%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+div.active.more .extra > span:nth-child(1) {
+  transition-delay: 0.1s;
+  left: -50%;
+}
+
+div.active.more .extra > span:nth-child(2) {
+  padding: 0;
+  transform: translate(-50%, -150%);
+}
+
+div.active.more .extra > span:nth-child(3) {
+  transition-delay: 0.1s;
+  left: 150%;
+}
+
+span.activeIcon {
+  opacity: 0;
+}
+
+.active .activeIcon {
+  opacity: 1;
+}
+
+.active .item > span:not(.activeIcon) {
+  opacity: 0;
+}
+
+.item.active > span:not(.activeIcon) {
+  opacity: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    display: block;
+  }
+}

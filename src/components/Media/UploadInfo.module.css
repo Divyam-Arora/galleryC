@@ -1,0 +1,150 @@
+.container {
+  width: 300px;
+  max-width: 97vw;
+  height: 95vh;
+  max-height: 200px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 1rem;
+  border-radius: 10px;
+  background-color: var(--primaryBackgroundColor);
+  background-color: #fff;
+  /* border: 2px solid black; */
+  box-shadow: 0px 5px 20px rgb(0, 0, 0, 0.3);
+  z-index: 99;
+  padding: 1rem 1rem 2rem 2rem;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.container.min {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  opacity: 0.5;
+  border: 2px solid var(--primaryColor);
+}
+
+.container > *:first-child {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.min > *:first-child {
+  opacity: 0;
+}
+
+.list {
+  opacity: 1;
+  overflow-y: auto;
+  height: 100%;
+  justify-content: start;
+  align-items: start;
+  padding-right: 1rem;
+}
+
+.item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1rem;
+}
+
+.thumbnail {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.thumbnail > *:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon {
+  color: #fff;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  transform: translateY(100%);
+  border-radius: 0 0 50% 50%;
+  border-top: 2px solid var(--primaryColor);
+  transition: opacity 0.5s, height 0.5s;
+  opacity: 0;
+  box-shadow: inset 0px 10px 10px var(--primaryColor);
+  background: linear-gradient(
+    180deg,
+    transparent,
+    transparent,
+    var(--primaryColor),
+    transparent,
+    transparent
+  );
+  background-color: var(--primaryColor);
+  background-color: #fff;
+  background-size: 400% 400%;
+  animation: loading;
+  animation-iteration-count: infinite;
+  background-position: top;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  /* animation-direction: reverse; */
+}
+
+@keyframes loading {
+  100% {
+    background-position: bottom;
+  }
+}
+
+.min .loader {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.progress {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-weight: bold;
+  mix-blend-mode: difference;
+  transition: transform 1s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.min .progress {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    position: absolute;
+  }
+}

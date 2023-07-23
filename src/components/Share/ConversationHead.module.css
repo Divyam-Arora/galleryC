@@ -1,0 +1,189 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* padding-right: 2rem; */
+  border-radius: 100px;
+}
+
+/* .container.selected {
+  outline: 2px solid var(--shade2);
+  outline-offset: -4px;
+  box-shadow: inset 0px 0px 1px 2px var(--shade2);
+} */
+
+.user-head {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  gap: 1px;
+}
+
+.user-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--primaryBackgroundColor);
+}
+
+.user-icon > img {
+  height: 50%;
+  width: 50%;
+  opacity: 0.7;
+}
+
+.user-icon:not(:first-child) {
+  /* outline: 3px solid #fff; */
+  border-left: 3px solid #fff;
+  margin-left: -1rem;
+  z-index: 1;
+}
+
+/* .user-head *:first-child {
+} */
+
+.container.head .user-head {
+  width: 4rem;
+  height: 4rem;
+}
+
+.container.profile {
+  flex-direction: column;
+  /* padding-left: 4rem; */
+  padding-right: 0rem;
+  align-items: center;
+  justify-content: center;
+  /* gap: 5rem; */
+}
+
+.profile > .details {
+  align-items: center;
+}
+
+.profile > .details > p {
+  justify-content: flex-start;
+  gap: 0rem;
+}
+
+.container.inline .user-head {
+  width: 3rem;
+  height: 3rem;
+}
+
+.container.conversation .user-head {
+  width: 6rem;
+  height: 6rem;
+}
+
+.container.profile .user-head {
+  width: 15rem;
+  height: 15rem;
+}
+
+/* .container.head .user-head span {
+  font-size: 2rem !important;
+}
+
+.container.head .user-head.group-head span {
+  font-size: 1rem !important;
+}
+
+.container.inline .user-head span {
+  font-size: 1.5rem !important;
+}
+
+.container.inline .user-head.group-head span {
+  font-size: 0.75rem !important;
+}
+
+.container.profile .user-head span {
+  font-size: 8rem !important;
+} */
+
+.edit {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rem;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 5;
+  transition: opacity 0.3s, gap 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.profile .user-head:hover .edit {
+  visibility: visible;
+  gap: 1rem;
+  opacity: 1;
+  /* backdrop-filter: blur(10px); */
+}
+
+.icon {
+  cursor: pointer;
+  padding: 1rem;
+  transition: 0.2s;
+  border-radius: 50%;
+}
+
+.icon:hover {
+  background-color: var(--primaryBackgroundColor);
+}
+
+.icon:active {
+  transform: scale(0.9);
+}
+
+.check {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  color: green;
+  /* margin-left: auto; */
+  /* margin-right: 2rem; */
+  transition: 0.3s ease-in;
+  opacity: 0;
+  transform: translateY(-50%) rotateY(180deg) scale(2);
+}
+
+.selected .check {
+  transform: translateY(-50%) rotateY(0deg) scale(1);
+  transition: 0.3s ease-out;
+  opacity: 1;
+}
+
+.container.small > .user-head {
+  width: 4rem !important;
+  height: 4rem !important;
+}
+
+.container.medium > .user-head {
+  width: 6rem !important;
+  height: 6rem !important;
+}
+
+.container.large > .user-head {
+  width: 8rem !important;
+  height: 8rem !important;
+}
+
+.container.xlarge > .user-head {
+  width: 15rem !important;
+  height: 15rem !important;
+}

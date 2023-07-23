@@ -1,0 +1,13 @@
+.upload {
+  border-radius: 10px;
+  position: relative;
+}
+
+.upload > button > p {
+  color: var(--primaryBackgroundColor);
+  font-weight: bold;
+  margin: 0;
+  z-index: 10;
+  gap: 5px;
+  align-items: center;
+}

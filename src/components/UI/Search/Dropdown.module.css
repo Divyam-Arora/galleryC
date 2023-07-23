@@ -1,0 +1,69 @@
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  display: grid;
+  grid-template-rows: 1fr;
+  animation: appear 0.2s forwards;
+  transition: 0.2s;
+  /* backdrop-filter: blur(10px); */
+  border-radius: 10px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 0.5rem;
+  padding: 1rem 0;
+  /* background-color: rgb(235, 234, 239, 0.5); */
+  background-color: var(--primaryBackgroundColor);
+  /* backdrop-filter: blur(10px); */
+  border-radius: 10px;
+  border: 1px solid var(--shade1);
+  /* box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1); */
+  overflow: hidden;
+}
+
+.list.clear {
+  border: 0px solid var(--shade3);
+  padding: 0rem 0;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    grid-template-rows: 0fr;
+  }
+
+  100% {
+    opacity: 1;
+    grid-template-rows: 1fr;
+  }
+}
+
+.list > li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  transition: 0.2s;
+  cursor: pointer;
+  /* color: #777; */
+}
+
+.list > li:hover {
+  background: linear-gradient(
+    to right,
+    var(--shade1),
+    var(--shade1)
+  ) !important;
+}
+
+.list > li.active {
+  /* outline: 1px solid var(--shade3); */
+  background: linear-gradient(to left, transparent, var(--shade1));
+}

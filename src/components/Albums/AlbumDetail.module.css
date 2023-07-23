@@ -1,0 +1,14 @@
+.description {
+  padding: 0 1rem 0.5rem 1rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  word-wrap: break-word;
+  word-spacing: 0.1px;
+  white-space: pre-line;
+}
+
+.date {
+  text-align: right;
+  padding: 0.5rem 1rem 1rem 1rem;
+  color: #777;
+}

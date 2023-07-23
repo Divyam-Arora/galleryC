@@ -1,0 +1,152 @@
+.btnP,
+.btnS,
+.btnSubtle,
+.btnInline {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  height: min-content;
+  min-width: max-content;
+  /* position: relative; */
+  /* z-index: 100; */
+  transition: 0.2s;
+}
+
+.rectangle {
+  padding: 0.9rem 1.8rem 0.9rem 1.8rem;
+}
+
+.square {
+  padding: 0.9rem;
+}
+
+.max {
+  width: 100%;
+}
+
+.min {
+  width: auto;
+}
+
+.btnP {
+  background-color: var(--primaryColor);
+  background: linear-gradient(
+    90deg,
+    var(--primaryColor),
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
+  background-position: left;
+  background-size: 200% 200%;
+  color: var(--primaryBackgroundColor);
+}
+
+.btnS {
+  background-color: var(--primaryBackgroundColor);
+  background: linear-gradient(
+    90deg,
+    var(--primaryBackgroundColor),
+    #d7d6e0,
+    var(--primaryBackgroundColor)
+  );
+  background-position: left;
+  background-size: 200% 200%;
+}
+
+.btnP:hover,
+.btnS:hover {
+  /* background-color: var(--secondaryColor); */
+  /* background-position: 50% 50%; */
+  background-position: right;
+  /* background: var(--secondaryColor); */
+}
+
+.btnP:active,
+.btnS:active,
+.btnSubtle:active {
+  /* box-shadow: 0px 10px 20px -10px var(--primaryColor); */
+  transform: scale(0.9);
+}
+
+.btnP:disabled,
+.btnS:disabled,
+.btnSubtle:disabled,
+.btnInline:disabled {
+  /* background: var(--secondaryColor); */
+  transform: scale(1) !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btnSubtle {
+  background-color: transparent;
+}
+
+.btnSubtle:hover {
+  background-color: var(--primaryBackgroundColor);
+}
+
+.btnInline {
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+}
+
+.btnInline > .icon {
+  display: flex;
+  align-items: center;
+  height: min-content;
+  opacity: 0.5;
+  transform: translateX(-50%);
+  transition: 0.2s;
+}
+
+.btnInline:hover > .icon {
+  opacity: 1;
+  transform: translateX(-25%);
+}
+
+.btnInline:active > .icon {
+  transform: translateX(0%);
+}
+
+.btnInline:disabled > .icon {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  button.btnP,
+  button.btnS,
+  button.btnSubtle,
+  button.btnInline {
+    border-radius: 5px;
+  }
+  .compact {
+    border-radius: 50% !important;
+    padding: 0.9rem;
+    /* background: none;
+    padding: 0rem; */
+    color: var(--secondaryColor);
+    background-color: var(--primaryBackgroundColor);
+    background: linear-gradient(
+      90deg,
+      var(--primaryBackgroundColor),
+      #d7d6e0,
+      var(--primaryBackgroundColor)
+    );
+    background-position: left;
+    background-size: 200% 200%;
+  }
+
+  /* .compact > *:first-child {
+    height: 3rem;
+    width: 3rem;
+  } */
+
+  .compact > *:not(:first-child) {
+    display: none;
+  }
+}

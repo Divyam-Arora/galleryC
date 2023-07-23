@@ -1,0 +1,31 @@
+.event {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.description {
+  line-height: 150%;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.date,
+.location {
+  text-align: right;
+  padding-right: 2rem;
+  color: #777;
+}
+
+.location {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.event > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}

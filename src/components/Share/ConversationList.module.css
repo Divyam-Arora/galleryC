@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100%;
+  overflow-y: scroll; */
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 2rem;
+}
+
+.list > li {
+  border-radius: 100px;
+  background-color: #fff;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    var(--primaryBackgroundColor),
+    var(--primaryBackgroundColor),
+    #fff,
+    #fff,
+    #fff
+  );
+  background-size: 250% 250%;
+  background-position: right;
+  transition: 0.3s;
+  transition-timing-function: linear;
+  /* overflow: hidden; */
+}
+
+.list > li:hover {
+  background-position: center;
+}
+
+.list > li.active {
+  background-position: left;
+  /* animation: select;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out; */
+}
+/* 
+@keyframes select {
+  100% {
+    background-position: left;
+  }
+} */
+
+@media screen and (max-width: 480px) {
+}

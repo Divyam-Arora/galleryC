@@ -1,0 +1,14 @@
+.media-grid {
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  align-content: center;
+  /* justify-items: center; */
+  justify-content: center;
+}
+
+.date {
+  padding: 2rem 1rem 0.5rem 1rem;
+  color: #666;
+  /* font-size: 1.4rem; */
+  /* opacity: 0.8; */
+}

@@ -1,0 +1,17 @@
+.notificationList {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  z-index: 999;
+  padding: 1.6rem;
+  /* max-height: 100vh; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.6rem;
+  transition: 0.2s;
+}

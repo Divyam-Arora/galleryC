@@ -1,0 +1,74 @@
+.container {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  /* height: 100%; */
+  /* flex-grow: 1; */
+  overflow-y: auto;
+}
+.targets {
+  width: max-content;
+  background-color: #fff;
+  display: grid;
+  /* grid-auto-rows: 0; */
+  grid-template-rows: 1fr min-content;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  justify-items: center;
+  margin: 0 auto;
+  /* margin-bottom: 2rem; */
+  margin-top: 1rem;
+  /* background-color: var(--primaryBackgroundColor); */
+  /* border-radius: 5px; */
+}
+
+.container > *:nth-child(2) {
+  overflow-y: auto;
+}
+
+.targets > div {
+  width: 100%;
+  text-align: center;
+  grid-row: 1 / 2;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.active-target {
+  color: #666 !important;
+}
+
+.targets > div:hover {
+  /* transform: translateY(-5%); */
+  color: #666;
+}
+
+.targets > div:active {
+  transform: scale(1);
+}
+
+.active {
+  grid-row: 2;
+  grid-column: 1;
+  height: 3px;
+  width: 0%;
+  background-color: var(--secondaryBackgroundColor);
+  transition: 0.3s;
+  border-radius: 100px;
+  transform: translateX(0%);
+  /* box-shadow: 0px 0px 10px var(--secondaryBackgroundColor); */
+  animation: appear 0.3s forwards;
+  /* border-bottom: 3px solid var(--secondaryBackgroundColor); */
+}
+
+@keyframes appear {
+  100% {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .targets {
+    width: 100%;
+  }
+}

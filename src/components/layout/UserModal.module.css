@@ -1,0 +1,130 @@
+.userModal {
+  position: absolute;
+  right: 2rem;
+  z-index: 599;
+  min-width: 30rem;
+}
+
+.userModal > div:first-child {
+  border-radius: 10px;
+  background-color: rgba(54, 48, 98, 0.6);
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  cursor: default;
+  background-blend-mode: darken;
+  padding: 3rem;
+  opacity: 0;
+  transform: translateY(-32px);
+  animation-name: appear;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  backdrop-filter: blur(7px);
+  /* box-shadow: 0px 0px 30px 0px var(--secondaryColor); */
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  padding: 1rem;
+  color: var(--primaryBackgroundColor);
+  /* text-align: center; */
+}
+
+.edit {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+  border-radius: 50%;
+  color: #555;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.edit:hover {
+  gap: 2rem;
+  opacity: 1;
+}
+
+.username {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  padding: 10px 48px 10px 16px;
+  background-color: var(--secondaryColor);
+}
+
+.username > p:first-child {
+  width: 30px;
+  height: 30px;
+  background-color: var(--primaryBackgroundColor);
+  color: var(--primaryColor);
+  border-radius: 50%;
+  margin-right: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 24px 24px; */
+  font-weight: 500;
+  transform: scale(2.1);
+  /* margin: auto; */
+}
+
+.nameemail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* border-radius: 5px; */
+  width: 100%;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: none;
+  border-right: none;
+  color: var(--primaryBackgroundColor);
+  text-align: center;
+}
+
+.nameemail > p:first-child {
+  font-weight: bold;
+}
+
+.nameemail > p:last-child {
+  opacity: 0.6;
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 1rem;
+}
+
+.actions button {
+  border-radius: 50px;
+  /* justify-content: center; */
+}
+
+.actions button p {
+  padding: 2px;
+}

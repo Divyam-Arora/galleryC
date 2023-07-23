@@ -1,0 +1,39 @@
+.container {
+  width: 50rem;
+  max-width: 97vw;
+}
+
+.head {
+  flex-wrap: wrap;
+}
+
+.head > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  padding: 0 1.6rem;
+}
+
+.item {
+  padding: 1rem;
+  border-radius: 15px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: var(--primaryBackgroundColor);
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-height: 70vh;
+  }
+  .list {
+    padding: 0 0.8rem;
+  }
+}

@@ -1,0 +1,50 @@
+.catagories {
+  padding: 1rem;
+}
+.catagories > h4 {
+  color: var(--primaryColor);
+  margin-bottom: 1rem;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+}
+
+.list > li {
+  width: 20%;
+  height: 100px;
+  margin-right: 2rem;
+  /* flex: 1 1 300px; */
+  /* padding-top: 20%; */
+  margin-bottom: 2rem;
+  /* z-index: -1; */
+  /* position: relative; */
+}
+
+.list > li > button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: flex-end;
+  /* background: linear-gradient(
+    90deg,
+    var(--secondaryBackgroundColor),
+    var(--primaryColor)
+  ); */
+
+  /* z-index: 2; */
+  /* position: relative; */
+}
+
+.name {
+  /* position: absolute;
+  bottom: 10px;
+  right: 20px; */
+  font-weight: bold;
+}

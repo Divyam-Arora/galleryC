@@ -1,0 +1,1 @@
+const ButtonSecondary = function (props) {};

@@ -1,0 +1,29 @@
+.loader > div {
+  transform: translateY(60%);
+  opacity: 0;
+  animation-name: uploading;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes uploading {
+  25% {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,10 @@
+.albumList {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.album {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,3 @@
+const ScrollRestoration = function () {
+  return <></>;
+};

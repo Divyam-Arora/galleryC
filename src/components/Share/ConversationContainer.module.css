@@ -1,0 +1,41 @@
+.container {
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition-duration: 0.2s;
+  /* box-shadow: -10px 0px 40px rgba(0, 0, 0, 0.2); */
+}
+
+.list {
+  display: flex;
+  flex-direction: column-reverse;
+}
+/* 
+.appear {
+  animation: appear-animation;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes appear-animation {
+  0% {
+    opacity: 0;
+    left: 50%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+} */
+
+@media screen and (max-width: 480px) {
+  .container {
+    /* gap: 1rem; */
+  }
+}
