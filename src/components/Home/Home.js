@@ -1,8 +1,5 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { ScrollRestoration, useNavigate } from "react-router-dom";
-import dummy from "../../dummy.png";
-import useHttp from "../../hooks/http-hook";
+import { useNavigate } from "react-router-dom";
 // import MediaCard from "../../UI/MediaCard";
 import MediaList from "../Media/MediaList";
 import MediaListContainer from "../Media/MediaListContainer";

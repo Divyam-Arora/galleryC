@@ -63,7 +63,7 @@ const Signup = function () {
     if (data || error) {
       setIsLoading(false);
     }
-  }, [data, dispatch, showNotifications, navigate]);
+  }, [data, dispatch, showNotifications, navigate, error]);
 
   return (
     <form className={`${classes.form} flex-column`} onSubmit={SignUpHandler}>

@@ -1,6 +1,6 @@
 import moment from "moment/moment";
 
-export const ApiBaseUrl = "gallery.up.railway.app/";
+export const ApiBaseUrl = "https://gallery.up.railway.app/";
 export const ApiBasePublicUrl = ApiBaseUrl + "api/public/";
 export const ApiBasePrivateUrl = ApiBaseUrl + "api/";
 export const ApiUserIcon = ApiBasePublicUrl + "user-icon.png";
