@@ -1,6 +1,6 @@
 .app {
   background-color: var(--background);
-  height: 100vh;
+  height: 100%;
 }
 
 .main {
@@ -9,7 +9,7 @@
   /* align-content: center; */
   grid-template-columns: min-content 1fr;
   grid-template-rows: min-content 1fr;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   /* margin-top: 2rem; */
   /* padding-top: 7rem; */
