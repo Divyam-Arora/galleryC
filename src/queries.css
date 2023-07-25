@@ -4,16 +4,10 @@
   }
 }
 
-/* @media screen and (max-width: 480px) {
-  html {
-    font-size: 62.5;
-  }
-} */
-
-@media screen and (max-width: 400px) {
-  html {
+@media screen and (max-width: 480px) {
+  /* html {
     font-size: 50%;
-  }
+  } */
 
   .main {
     grid-template-columns: 1fr;
@@ -69,5 +63,11 @@
     border: none;
     border-radius: 2px;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 50%;
   }
 }
