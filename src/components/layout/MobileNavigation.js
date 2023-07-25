@@ -77,9 +77,14 @@ const MobileNavigation = function () {
               className={`${classes.item} ${isMore ? classes.active : ""} ${
                 classes.more
               }`}
-              onClick={() => setIsMore((s) => !s)}
+              onClick={(e) => {
+                // e.preventDefault();
+                // if (!e.target.closest(`.${classes.extras}`)) {
+                setIsMore((s) => !s);
+                // }
+              }}
             >
-              <div className={classes.extra}>
+              <div className={classes.extras}>
                 <span onClick={() => navigate("/people")}>
                   <MdPeople />
                 </span>
@@ -91,12 +96,14 @@ const MobileNavigation = function () {
                   <MdPerson />
                 </span>
               </div>
-              <span className={`${classes.activeIcon} flex-row`}>
-                <MdAddCircle />
-              </span>
-              <span className="flex-row">
-                <MdAddCircleOutline />
-              </span>
+              <div className={`width-100 height-100 ${classes.extra}`}>
+                <span className={`${classes.activeIcon} flex-row`}>
+                  <MdAddCircle />
+                </span>
+                <span className="flex-row">
+                  <MdAddCircleOutline />
+                </span>
+              </div>
             </div>
             {/* <p>More</p> */}
           </li>

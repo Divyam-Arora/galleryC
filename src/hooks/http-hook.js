@@ -72,7 +72,7 @@ const useHttp = (initialData = null) => {
           console.log(error);
           const errMsg = error?.response?.data?.message || error?.message;
           setIsLoading(false);
-          if (error.response.data.code == "TOKEN_EXPIRED") {
+          if (error?.response?.data?.code == "TOKEN_EXPIRED") {
             dispatch(httpStateActions.clean());
             dispatch(
               showNotifications({
@@ -144,7 +144,7 @@ const useHttp = (initialData = null) => {
                 description: errMsg,
               })
             );
-            if (error.response.data.code == "REFRESH_TOKEN_EXPIRED") {
+            if (error?.response?.data?.code == "REFRESH_TOKEN_EXPIRED") {
               dispatch(logout());
             }
             setError(error);

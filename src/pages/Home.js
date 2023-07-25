@@ -37,7 +37,7 @@ const HomePage = () => {
     <>
       <div className="content-header">
         <h2 className="heading-secondary">Home</h2>
-        <DateSearch action={searchAction} initialDate={search} />
+        <DateSearch action={searchAction} initialDate={search} padding={true} />
       </div>
       <div
         className={`subcontent`}

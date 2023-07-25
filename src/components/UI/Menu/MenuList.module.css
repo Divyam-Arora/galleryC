@@ -52,5 +52,5 @@
 }
 
 .list > li:active {
-  background-color: #d7d6e0;
+  background-color: var(--shade1);
 }

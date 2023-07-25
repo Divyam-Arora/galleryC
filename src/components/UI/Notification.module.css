@@ -43,6 +43,10 @@
   justify-content: flex-start;
 }
 
+.icon {
+  flex-shrink: 0;
+}
+
 .info {
   color: var(--secondaryColor);
 }

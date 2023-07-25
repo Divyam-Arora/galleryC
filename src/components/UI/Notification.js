@@ -27,11 +27,15 @@ const Notification = (props) => {
 
   return (
     <div className={classes.notification}>
-      <div className="flex-row">
-        <IconContext.Provider value={{ size: "24px", className: classname }}>
+      <div className="flex-row width-100">
+        <IconContext.Provider
+          value={{ size: "2.4rem", className: `${classname} ${classes.icon}` }}
+        >
           {icon}
         </IconContext.Provider>
-        <p>{props.description}</p>
+        <p className="ellipsis height-100 width-100 flex-row justify-start">
+          {props.description}
+        </p>
       </div>
     </div>
   );

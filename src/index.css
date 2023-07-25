@@ -59,6 +59,13 @@ Medium: 11px
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 html {
@@ -79,7 +86,7 @@ body {
   /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
 }
 
-button,
+/* button,
 textarea,
 input,
 select,
@@ -91,7 +98,7 @@ a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
+} */
 
 #root {
   height: 100%;
@@ -399,7 +406,8 @@ a:active {
   cursor: pointer;
 }
 
-.icon {
+.icon,
+.icon-sm {
   /* display: inline-block; */
   display: flex;
   width: fit-content;
@@ -409,11 +417,17 @@ a:active {
   border-radius: 50%;
 }
 
-.icon:hover {
+.icon-sm {
+  padding: 0.5rem;
+}
+
+.icon:hover,
+.icon-sm:hover {
   background-color: var(--primaryBackgroundColor);
 }
 
-.icon:active {
+.icon:active,
+.icon-sm:active {
   transform: scale(0.9);
 }
 

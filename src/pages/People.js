@@ -36,6 +36,7 @@ const PeoplePage = (props) => {
           action={searchAction}
           timed={true}
           placeholder="Find people..."
+          padding={true}
         />
       </div>
       <div

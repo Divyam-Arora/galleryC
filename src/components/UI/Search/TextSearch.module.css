@@ -94,6 +94,9 @@ div.back {
   .container:not(.responsive) {
     width: 100%;
   }
+  .search {
+    border-radius: 100px;
+  }
   .responsive .button {
     display: flex;
     align-items: center;

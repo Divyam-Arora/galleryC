@@ -24,6 +24,7 @@ const DateSearch = function ({
   initialDate,
   responsive = true,
   disabled = false,
+  padding = false,
 }) {
   const [years, setYears] = useState([]);
   const [months, setMonths] = useState([]);
@@ -106,8 +107,10 @@ const DateSearch = function ({
       className={`${classes.search} ${responsive ? classes.responsive : ""}`}
     >
       <div className={classes.button} onClick={() => setIsOpen(true)}>
-        <IconContext.Provider value={{ size: "2.5rem" }}>
-          <MdOutlineImageSearch />
+        <IconContext.Provider value={{ size: padding ? "2.75rem" : "2.5rem" }}>
+          <span className={padding ? "icon-sm" : ""}>
+            <MdOutlineImageSearch />
+          </span>
         </IconContext.Provider>
       </div>
       <IconContext.Provider value={{ size: "2rem" }}>

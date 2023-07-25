@@ -32,6 +32,7 @@ const TextSearch = ({
   emptyAfterSearch = false,
   loading = false,
   disabled = false,
+  padding = false,
 }) => {
   const [input, setInput] = useState("");
   const [timer, setTimer] = useState(null);
@@ -127,9 +128,11 @@ const TextSearch = ({
           inputRef.current.focus();
         }}
       >
-        <IconContext.Provider value={{ size: "2.5rem" }}>
+        <IconContext.Provider value={{ size: padding ? "3rem" : "2.5rem" }}>
           {/* <ButtonPrimary compact={true}> */}
-          <MdSearch />
+          <span className={padding ? "icon-sm" : ""}>
+            <MdSearch />
+          </span>
           {/* </ButtonPrimary> */}
         </IconContext.Provider>
       </div>

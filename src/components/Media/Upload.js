@@ -35,7 +35,7 @@ const filesReducer = (state, action) => {
           uploadActions.appendActive({
             list: [
               {
-                id: newState.id,
+                id: newState?.id,
                 file: URL.createObjectURL(action.file),
                 type: action.file.type.split("/")[0],
               },
