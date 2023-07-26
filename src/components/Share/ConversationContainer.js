@@ -18,6 +18,9 @@ import LeaveConversationForm from "./LeaveConversationForm";
 import EditGroupMembersForm from "./EditGroupMembersForm";
 import { shareActions } from "../../store/share-slice";
 import BackgroundLoader from "../UI/Spinner/BackgroundLoader";
+import ButtonPrimary from "../UI/ButtonPrimary";
+import { IconContext } from "react-icons";
+import { MdShare } from "react-icons/md";
 
 const ConversationContainer = function () {
   const { list: conversations } = useSelector((state) => state.share);
@@ -75,9 +78,6 @@ const ConversationContainer = function () {
   useEffect(() => {
     if (conversationId && conversation) {
       let menu = {
-        Share: () => {
-          setIsAddingMedia(true);
-        },
         Info: () => {
           navigate("info");
         },
@@ -214,7 +214,20 @@ const ConversationContainer = function () {
             <BackgroundLoader width={"50%"} height={"100%"} animate={true} />
           )}
         </h2>
-        {menuItems && <Menu menuItems={menuItems} />}
+        <div className="flex-row">
+          <ButtonPrimary
+            compact={true}
+            onClick={() => {
+              setIsAddingMedia(true);
+            }}
+          >
+            <IconContext.Provider value={{ size: "2rem" }}>
+              <MdShare />
+            </IconContext.Provider>
+            <p>Share</p>
+          </ButtonPrimary>
+          {menuItems && <Menu menuItems={menuItems} />}
+        </div>
       </div>
       <div
         className={`subcontent ${classes.list}`}

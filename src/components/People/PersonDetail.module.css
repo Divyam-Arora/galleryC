@@ -59,6 +59,10 @@
 @media screen and (max-width: 480px) {
   .person {
     margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+  .details {
+    padding-top: 1rem;
   }
   .conversation {
     margin: 0 0 0.5rem 0.5rem;

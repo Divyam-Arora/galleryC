@@ -143,6 +143,9 @@
   .psedu {
     height: 30vh;
   }
+  .title {
+    font-size: 2rem;
+  }
   .conversations {
     grid-template-columns: 1fr !important;
     /* gap: 0; */

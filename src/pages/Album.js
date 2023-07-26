@@ -93,7 +93,7 @@ const AlbumPage = ({ items }) => {
       <div className="content-header">
         <h2
           title={error || album?.item?.name}
-          className="heading-secondary ellipsis height-100 flex-row align-end"
+          className="heading-secondary ellipsis flex-row align-end"
         >
           {album.search ? (
             <div className="flex-row">

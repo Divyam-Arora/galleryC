@@ -61,6 +61,7 @@ const ConversationMediaGrid = function () {
             setSearch(value);
           }}
           value={search}
+          padding={true}
         />
       </div>
       <div className="subcontent">

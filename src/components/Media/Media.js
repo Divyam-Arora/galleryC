@@ -171,7 +171,10 @@ const Media = (props) => {
           <BackgroundLoader height={"100%"} width={"30%"} animate={true} />
         ) : (
           <>
-            <h2 title={media?.name} className="heading-secondary ellipsis">
+            <h2
+              title={media?.name}
+              className={`heading-secondary ellipsis ${classes.title}`}
+            >
               {media?.name || error?.message}
             </h2>
 

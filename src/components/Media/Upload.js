@@ -193,14 +193,14 @@ const Upload = function (props) {
         compact={true}
       >
         <IconContext.Provider value={{ size: "2rem" }}>
-          {isLoading ? (
+          {/* {!isLoading ? (
             <UploadSpinner />
-          ) : (
-            <>
-              <MdOutlineFileUpload />
-              <p>Upload</p>
-            </>
-          )}
+          ) : ( */}
+          <>
+            <MdOutlineFileUpload />
+            <p>Upload</p>
+          </>
+          {/* )} */}
         </IconContext.Provider>
         <form
           ref={formRef}

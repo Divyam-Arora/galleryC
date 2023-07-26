@@ -146,5 +146,6 @@
 @media screen and (max-width: 480px) {
   .container {
     position: absolute;
+    width: 90vw;
   }
 }

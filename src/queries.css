@@ -20,6 +20,8 @@
 
   .content-header {
     padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    align-items: center;
     height: max-content;
     /* align-items: center; */
   }
