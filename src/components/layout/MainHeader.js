@@ -9,7 +9,7 @@ import { userDetailActions } from "../../store/user-slice";
 import DeleteIconForm from "../UI/Forms/DeleteIconForm";
 import { ApiEditUserIcon } from "../../util/apis";
 import DeleteModal from "../UI/Forms/DeleteModal";
-import logo from "../../../public/android-chrome-512x512.png";
+import logo from "../Images/android-chrome-512x512.png";
 import { personActions } from "../../store/person-slice";
 
 const MainHeader = (props) => {

@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import classes from "./Auth.module.css";
-import logo from "../../../public/android-chrome-512x512.png";
+import logo from "../Images/android-chrome-512x512.png";
 
 const Auth = function (props) {
   return (
