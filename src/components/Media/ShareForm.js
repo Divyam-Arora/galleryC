@@ -234,7 +234,7 @@ const ShareForm = function ({ closeAction }) {
                 })}
               </ul>
             )}
-            {loadingState && (
+            {!isLoading && loadingState && (
               <span className="flex-row">
                 <UserModalSpinner />
               </span>
@@ -258,6 +258,7 @@ const ShareForm = function ({ closeAction }) {
             </ButtonPrimary>
             <ButtonPrimary
               type="button"
+              disabled={isLoading}
               style={"secondary"}
               onClick={() => setToClose(true)}
             >

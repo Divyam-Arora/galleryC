@@ -145,6 +145,10 @@
 }
 
 .alt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  text-align: center;
   padding: 1rem;
   animation: appear 0.5s forwards;
 }
