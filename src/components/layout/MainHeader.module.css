@@ -16,9 +16,19 @@
   position: relative;
 }
 
-.header > h1 {
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo > h1 {
   color: var(--primaryBackgroundColor);
   position: relative;
+}
+.logo > img {
+  width: 4rem;
+  height: auto;
 }
 
 .actions {
