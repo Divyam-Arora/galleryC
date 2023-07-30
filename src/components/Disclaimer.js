@@ -6,8 +6,11 @@ const Disclaimer = function ({ action }) {
     action();
   };
   return (
-    <Modal action={closeAction}>
-      <section style={{ width: "400px", maxWidth: "95vw" }}>
+    <Modal action={closeAction} initialReset={true}>
+      <section
+        style={{ width: "450px", maxWidth: "97vw" }}
+        className="modal-padding"
+      >
         <div className="modal-header">
           <h3 className="heading-tertiary">Disclaimer</h3>
         </div>
