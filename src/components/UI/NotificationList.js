@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Notification from "./Notification";
 
 import classes from "./NotificationList.module.css";

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useHttp from "../../hooks/http-hook";
 import { shareActions } from "../../store/share-slice";
 import { ApiGetAllConversations } from "../../util/apis";
-import UserModalSpinner from "../layout/UserModalSpinner";
-import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
 import EmptyState from "../UI/EmptyState";
+import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
+import UserModalSpinner from "../layout/UserModalSpinner";
 
 const ConversationListContainer = function ({ children }) {
   const {

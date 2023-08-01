@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import useHttp from "../../hooks/http-hook";
 import { homeActions } from "../../store/home-slice";
 import { ApiGetAllMedia } from "../../util/apis";
-import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
 import EmptyState from "../UI/EmptyState";
+import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
 
 const MediaListContainer = ({ children, triggerPaused, showLoader = true }) => {
   const {

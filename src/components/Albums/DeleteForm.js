@@ -1,11 +1,6 @@
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import useHttp from "../../hooks/http-hook";
+import { useDispatch } from "react-redux";
 import { albumsActions } from "../../store/albums-slice";
 import { ApiDeleteAlbum } from "../../util/apis";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import Modal from "../UI/Modal";
-import ModalSpinner from "../UI/ModalSpinner";
 import DeleteModal from "../UI/Forms/DeleteModal";
 
 const DeleteForm = function ({ deleteAction, albumId }) {

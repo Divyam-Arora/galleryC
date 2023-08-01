@@ -1,29 +1,12 @@
 import React, { useMemo, useRef } from "react";
-import {
-  Routes,
-  Route,
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-  ScrollRestoration,
-  Outlet,
-} from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 
-import MainNavigation from "./components/layout/MainNavigation";
 import "./App.css";
 
-import * as Pages from "./pages";
-import MainHeader from "./components/layout/MainHeader";
-import LoadingSpinner from "./components/UI/LoadingSpinner";
-import Notification from "./components/UI/Notification";
-import NotificationList from "./components/UI/NotificationList";
-import Login from "./components/auth/Login";
-import ParentPage from "./pages/ParentPage";
-import Signup from "./components/auth/Signup";
-import Disclaimer from "./components/Disclaimer";
 import { useState } from "react";
-import UploadInfo from "./components/Media/UploadInfo";
+import Disclaimer from "./components/Disclaimer";
+import NotificationList from "./components/UI/NotificationList";
 import useScroll from "./hooks/scroll-hook";
 
 // const router = createBrowserRouter(

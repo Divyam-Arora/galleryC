@@ -1,10 +1,10 @@
 import moment from "moment";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { actions, getActivity, getUserSubject } from "../../util/helpers";
 import MediaCard from "../UI/MediaCard";
 import ConversationMedia from "./ConversationMedia";
 import classes from "./ConversationMediaList.module.css";
-import { actions, getActivity, getUserSubject } from "../../util/helpers";
 
 const ConversationMediaList = function () {
   const { list: activities, item: conversation } = useSelector(

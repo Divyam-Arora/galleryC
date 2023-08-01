@@ -1,13 +1,11 @@
-import { useLocation, useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { React, useEffect } from "react";
-import PeopleList from "../components/People/PeopleList";
-import useHttp from "../hooks/http-hook";
-import { peopleActions } from "../store/people-slice";
-import TextSearch from "../components/UI/Search/TextSearch";
-import { ApiGetPeople } from "../util/apis";
-import PeopleListContainer from "../components/People/PeopleListContainer";
+import { React } from "react";
 import { MdSearch } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
+import PeopleList from "../components/People/PeopleList";
+import PeopleListContainer from "../components/People/PeopleListContainer";
+import TextSearch from "../components/UI/Search/TextSearch";
+import { peopleActions } from "../store/people-slice";
 
 const PeoplePage = (props) => {
   const people = useSelector((state) => state.people);

@@ -1,6 +1,5 @@
-import { MdArrowForward, MdArrowForwardIos } from "react-icons/md";
+import { MdArrowForwardIos } from "react-icons/md";
 import classes from "./ButtonPrimary.module.css";
-import ButtonSpinner from "./Spinner/ButtonSpinner";
 
 const ButtonPrimary = ({
   type,

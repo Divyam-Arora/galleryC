@@ -7,7 +7,6 @@ import PersonHead from "../People/PersonHead";
 import BackButton from "../UI/BackButton";
 import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
 import containerClasses from "./ConversationContainer.module.css";
-import ConversationHead from "./ConversationHead";
 
 const ConversationMembers = () => {
   const containerRef = useRef();

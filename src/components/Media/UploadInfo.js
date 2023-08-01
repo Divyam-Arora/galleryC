@@ -1,22 +1,17 @@
-import { useDispatch, useSelector } from "react-redux";
-import classes from "./UploadInfo.module.css";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { IconContext } from "react-icons";
 import {
-  MdCheck,
-  MdCheckCircle,
   MdCheckCircleOutline,
   MdClearAll,
-  MdClose,
-  MdError,
   MdErrorOutline,
-  MdInfo,
   MdInfoOutline,
   MdMinimize,
   MdPlayCircle,
 } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
 import { uploadActions } from "../../store/upload-slice";
-import { useCallback, useEffect, useRef, useState } from "react";
 import { uploadAction } from "../../util/actions";
-import { IconContext } from "react-icons";
+import classes from "./UploadInfo.module.css";
 
 const timeout = 3000;
 const UploadInfo = function () {

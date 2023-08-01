@@ -1,29 +1,28 @@
-import { useEffect, useMemo, useState } from "react";
-import Modal from "../UI/Modal";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import classes from "./ShareForm.module.css";
-import formClasses from "./SelectionForm.module.css";
-import useSelection from "../../hooks/selection-hook";
-import ModalSpinner from "../UI/ModalSpinner";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 import useHttp from "../../hooks/http-hook";
-import { useDispatch, useSelector } from "react-redux";
-import EditGroupMembersForm from "../Share/EditGroupMembersForm";
-import TextSearch from "../UI/Search/TextSearch";
+import useSelection from "../../hooks/selection-hook";
+import { conversationActions } from "../../store/conversation-slice";
+import { mediaActions } from "../../store/media-slice";
+import { personActions } from "../../store/person-slice";
 import {
-  ApiEditConversationMedia,
   ApiEditMediaConversations,
   ApiGetAllConversations,
   ApiGetAllMediaConversations,
   ApiGetPeople,
 } from "../../util/apis";
-import ConversationHead from "../Share/ConversationHead";
 import PersonHead from "../People/PersonHead";
-import UserModalSpinner from "../layout/UserModalSpinner";
-import { useParams } from "react-router-dom";
-import { mediaActions } from "../../store/media-slice";
-import { personActions } from "../../store/person-slice";
-import { conversationActions } from "../../store/conversation-slice";
+import ConversationHead from "../Share/ConversationHead";
+import EditGroupMembersForm from "../Share/EditGroupMembersForm";
+import ButtonPrimary from "../UI/ButtonPrimary";
 import EmptyState from "../UI/EmptyState";
+import Modal from "../UI/Modal";
+import ModalSpinner from "../UI/ModalSpinner";
+import TextSearch from "../UI/Search/TextSearch";
+import UserModalSpinner from "../layout/UserModalSpinner";
+import formClasses from "./SelectionForm.module.css";
+import classes from "./ShareForm.module.css";
 
 const ShareForm = function ({ closeAction }) {
   const { mediaId } = useParams();

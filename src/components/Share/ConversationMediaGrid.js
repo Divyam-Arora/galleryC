@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
+import { MdSearch } from "react-icons/md";
 import { Link, useParams } from "react-router-dom";
 import useHttp from "../../hooks/http-hook";
 import { ApiGetConversationMedia } from "../../util/apis";
 import BackButton from "../UI/BackButton";
 import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
+import TextSearch from "../UI/Search/TextSearch";
 import containerClasses from "./ConversationContainer.module.css";
 import ConversationMedia from "./ConversationMedia";
-import TextSearch from "../UI/Search/TextSearch";
-import { MdSearch } from "react-icons/md";
 
 const ConversationMediaGrid = function () {
   const containerRef = useRef();

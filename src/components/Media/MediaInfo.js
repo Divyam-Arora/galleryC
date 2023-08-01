@@ -1,25 +1,24 @@
-import { useSelector } from "react-redux";
-import Modal from "../UI/Modal";
-import classes from "./MediaInfo.module.css";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Album from "../Albums/Album";
-import ConversationHead from "../Share/ConversationHead";
-import useHttp from "../../hooks/http-hook";
-import { ApiGetMediaAlbums, ApiGetMediaConversations } from "../../util/apis";
-import UserModalSpinner from "../layout/UserModalSpinner";
-import ButtonPrimary from "../UI/ButtonPrimary";
+import { IconContext } from "react-icons";
 import {
   MdEvent,
-  MdImage,
   MdOndemandVideo,
   MdOutlineImage,
   MdPhotoSizeSelectLarge,
   MdShortText,
 } from "react-icons/md";
-import { IconContext } from "react-icons";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import useHttp from "../../hooks/http-hook";
+import { ApiGetMediaAlbums, ApiGetMediaConversations } from "../../util/apis";
 import { getSize } from "../../util/helpers";
+import Album from "../Albums/Album";
 import PersonHead from "../People/PersonHead";
+import ConversationHead from "../Share/ConversationHead";
+import ButtonPrimary from "../UI/ButtonPrimary";
+import Modal from "../UI/Modal";
+import UserModalSpinner from "../layout/UserModalSpinner";
+import classes from "./MediaInfo.module.css";
 
 const MediaInfo = function ({ type = "info", action }) {
   const { item: media } = useSelector((state) => state.media);

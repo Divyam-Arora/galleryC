@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import useHttp from "../../hooks/http-hook";
-import { ApiGetPeople } from "../../util/apis";
 import { useDispatch, useSelector } from "react-redux";
+import useHttp from "../../hooks/http-hook";
 import { peopleActions } from "../../store/people-slice";
-import UserModalSpinner from "../layout/UserModalSpinner";
+import { ApiGetPeople } from "../../util/apis";
 import EmptyState from "../UI/EmptyState";
+import UserModalSpinner from "../layout/UserModalSpinner";
 
 const PeopleListContainer = function ({ showLoading = false, children }) {
   const { sendRequest, data, cleanUp, isLoading } = useHttp();

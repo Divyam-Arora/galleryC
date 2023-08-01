@@ -1,10 +1,8 @@
-import items from "./data";
 import Album from "./Album";
 
-import classes from "./AlbumList.module.css";
-import { useNavigate } from "react-router-dom";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import classes from "./AlbumList.module.css";
 
 const AlbumList = ({ list: albums = [], action, selectedList = [] }) => {
   const navigate = useNavigate();

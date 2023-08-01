@@ -1,10 +1,6 @@
 import { useState } from "react";
-import useHttp from "../../../hooks/http-hook";
-import { useDispatch } from "react-redux";
-import ButtonPrimary from "../ButtonPrimary";
-import ModalSpinner from "../ModalSpinner";
 import { MdDelete } from "react-icons/md";
-import Modal from "../Modal";
+import useHttp from "../../../hooks/http-hook";
 import DeleteModal from "../Forms/DeleteModal";
 
 const DeleteIcon = function ({ API, action }) {

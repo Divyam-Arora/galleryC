@@ -1,16 +1,10 @@
-import { ScrollRestoration, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Home from "../components/Home/Home";
-import useHttp from "../hooks/http-hook";
 
-import { API_KEY } from "../util/api-key";
-import { homeActions } from "../store/home-slice";
-import { ApiGetAllMedia } from "../util/apis";
-import ScrollTriggerContainer from "../components/UI/ScrollTriggerContainer";
-import DateSearch from "../components/UI/Search/DateSearch";
-import EmptyState from "../components/UI/EmptyState";
 import { useRef } from "react";
+import DateSearch from "../components/UI/Search/DateSearch";
+import { homeActions } from "../store/home-slice";
 
 // const transformTempData = (data) => {
 //   return data.map((val) => {

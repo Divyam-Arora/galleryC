@@ -1,19 +1,19 @@
 import { useEffect, useMemo, useState } from "react";
+import { IconContext } from "react-icons";
+import { MdLogout } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useParams } from "react-router-dom";
 import PersonDetail from "../components/People/PersonDetail";
 import PersonMediaForm from "../components/People/PersonMediaForm";
+import UserDetail from "../components/People/UserDetail";
+import ButtonPrimary from "../components/UI/ButtonPrimary";
 import Menu from "../components/UI/Menu";
 import ScrollTriggerContainer from "../components/UI/ScrollTriggerContainer";
 import TextSearch from "../components/UI/Search/TextSearch";
 import useHttp from "../hooks/http-hook";
+import { logout } from "../store/auth-actions";
 import { personActions } from "../store/person-slice";
 import { ApiGetPerson, ApiGetPersonSharedMedia } from "../util/apis";
-import UserDetail from "../components/People/UserDetail";
-import { IconContext } from "react-icons";
-import ButtonPrimary from "../components/UI/ButtonPrimary";
-import { logout } from "../store/auth-actions";
-import { MdLogout } from "react-icons/md";
 
 const Person = function () {
   const { username } = useParams();

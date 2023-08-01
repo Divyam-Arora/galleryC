@@ -2,15 +2,14 @@ import { NavLink } from "react-router-dom";
 
 import classes from "./MainNavigation.module.css";
 
+import { IconContext } from "react-icons";
 import {
   MdOutlineCollections,
-  MdOutlineSearch,
   MdOutlineFolderShared,
-  MdOutlinePhotoAlbum,
   MdOutlinePeopleAlt,
-  MdOutlineEventNote,
+  MdOutlinePhotoAlbum,
+  MdOutlineSearch,
 } from "react-icons/md";
-import { IconContext } from "react-icons";
 
 const links = [
   {

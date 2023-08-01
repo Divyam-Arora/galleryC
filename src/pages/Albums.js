@@ -1,33 +1,13 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import React, { useMemo, useState } from "react";
+import { MdSearch } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import React, { useEffect } from "react";
-import { useState } from "react";
-import { API_KEY } from "../util/api-key";
-import { useMemo } from "react";
-import Album from "./Album";
-import items from "../components/Albums/data";
-import AlbumList from "../components/Albums/AlbumList";
-import useHttp from "../hooks/http-hook";
-import { albumsActions } from "../store/albums-slice";
-import { ApiGetAllAlbums } from "../util/apis";
-import ButtonPrimary from "../components/UI/ButtonPrimary";
-import {
-  MdAdd,
-  MdAddBox,
-  MdAddCircleOutline,
-  MdLibraryAdd,
-  MdOutlineAddBox,
-  MdSearch,
-} from "react-icons/md";
-import { IconContext } from "react-icons";
+import { useLocation, useNavigate } from "react-router-dom";
 import AlbumForm from "../components/Albums/AlbumForm";
-import Menu from "../components/UI/Menu";
-import ScrollTriggerContainer from "../components/UI/ScrollTriggerContainer";
+import AlbumList from "../components/Albums/AlbumList";
 import AlbumListContainer from "../components/Albums/AlbumListContainer";
+import Menu from "../components/UI/Menu";
 import TextSearch from "../components/UI/Search/TextSearch";
-import { notificationActions } from "../store/notification-slice";
-import { showNotifications } from "../store/notification-actions";
-import EmptyState from "../components/UI/EmptyState";
+import { albumsActions } from "../store/albums-slice";
 
 const AlbumsPage = React.memo((props) => {
   const navigate = useNavigate();

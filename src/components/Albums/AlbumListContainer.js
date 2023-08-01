@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import useHttp from "../../hooks/http-hook";
 import { albumsActions } from "../../store/albums-slice";
 import { ApiGetAllAlbums } from "../../util/apis";
-import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
 import EmptyState from "../UI/EmptyState";
+import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
 
 const AlbumListContainer = ({ children, triggerPaused, showLoader = true }) => {
   const {

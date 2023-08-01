@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import useHttp from "../../hooks/http-hook";
 import { albumsActions } from "../../store/albums-slice";

@@ -1,22 +1,22 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
+import { IconContext } from "react-icons";
+import { MdRemoveCircleOutline } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import useHttp from "../../hooks/http-hook";
+import { personActions } from "../../store/person-slice";
 import {
   ApiEditConversationMedia,
   ApiGetPersonSharedGroups,
   ApiGetPersonSharedMediaConversations,
 } from "../../util/apis";
-import Modal from "../UI/Modal";
-import classes from "./SharedGroups.module.css";
 import ConversationHead from "../Share/ConversationHead";
-import UserModalSpinner from "../layout/UserModalSpinner";
-import { Link } from "react-router-dom";
-import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
-import { MdRemoveCircleOutline } from "react-icons/md";
 import ButtonPrimary from "../UI/ButtonPrimary";
-import { IconContext } from "react-icons";
+import Modal from "../UI/Modal";
 import ModalSpinner from "../UI/ModalSpinner";
-import { useDispatch, useSelector } from "react-redux";
-import { personActions } from "../../store/person-slice";
+import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
+import UserModalSpinner from "../layout/UserModalSpinner";
+import classes from "./SharedGroups.module.css";
 
 const SharedGroups = function ({ closeAction, type, options }) {
   const { sendRequest, data, cleanUp, isLoading } = useHttp();

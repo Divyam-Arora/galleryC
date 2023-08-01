@@ -1,11 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-import KebabButton from "./KebabButton";
-import MenuList from "./MenuList";
-import classes from "./Menu.module.css";
+import { useRef, useState } from "react";
 import { IconContext } from "react-icons";
-import ButtonPrimary from "../ButtonPrimary";
-import useDeepCompareEffect from "use-deep-compare-effect";
 import { MdAdd, MdDelete, MdEdit, MdInfo, MdShare } from "react-icons/md";
+import ButtonPrimary from "../ButtonPrimary";
+import KebabButton from "./KebabButton";
+import classes from "./Menu.module.css";
+import MenuList from "./MenuList";
 
 const icons = {
   add: <MdAdd />,

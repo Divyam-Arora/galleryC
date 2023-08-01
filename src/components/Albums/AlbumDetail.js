@@ -1,7 +1,5 @@
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { albumsActions } from "../../store/albums-slice";
 import MediaCard from "../UI/MediaCard";
 import classes from "./AlbumDetail.module.css";
 

@@ -1,9 +1,8 @@
-import { Outlet, Route, Routes, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { Outlet, useNavigate } from "react-router-dom";
 
 import Auth from "../components/auth/Auth";
-import Login from "../components/auth/Login";
 
 const AuthPage = function (props) {
   const { isLoggedIn } = useSelector((state) => state.auth);

@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import Modal from "../UI/Modal";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import useHttp from "../../hooks/http-hook";
-import { useDispatch } from "react-redux";
 import { conversationActions } from "../../store/conversation-slice";
 import { shareActions } from "../../store/share-slice";
 import { ApiEditGroupName } from "../../util/apis";
+import ButtonPrimary from "../UI/ButtonPrimary";
+import Modal from "../UI/Modal";
 import ModalSpinner from "../UI/ModalSpinner";
 
 const GroupNameForm = function ({ closeAction, name }) {

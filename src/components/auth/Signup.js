@@ -1,14 +1,12 @@
-import React, { Component, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { NavLink, useNavigate, Link } from "react-router-dom";
-import { authActions } from "../../store/auth-slice";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 import useHttp from "../../hooks/http-hook";
 import { showNotifications } from "../../store/notification-actions";
-import classes from "./Auth.module.css";
-import ButtonSpinner from "../UI/Spinner/ButtonSpinner";
 import { ApiSignup } from "../../util/apis";
+import ButtonPrimary from "../UI/ButtonPrimary";
+import ButtonSpinner from "../UI/Spinner/ButtonSpinner";
+import classes from "./Auth.module.css";
 
 const Signup = function () {
   const usernameRef = useRef();

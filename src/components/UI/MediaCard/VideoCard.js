@@ -1,7 +1,6 @@
-import classes from "./VideoCard.module.css";
-import { MdOutlinePlayCircleFilled } from "react-icons/md";
 import { IconContext } from "react-icons";
-import { useEffect, useRef, useState } from "react";
+import { MdOutlinePlayCircleFilled } from "react-icons/md";
+import classes from "./VideoCard.module.css";
 
 const VideoCard = (props) => {
   return (

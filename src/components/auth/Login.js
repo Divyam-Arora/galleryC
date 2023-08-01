@@ -1,13 +1,13 @@
-import React, { Component, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { authActions } from "../../store/auth-slice";
 import classes from "./Auth.module.css";
 
-import ButtonPrimary from "../UI/ButtonPrimary";
 import useHttp from "../../hooks/http-hook";
-import ButtonSpinner from "../UI/Spinner/ButtonSpinner";
 import { ApiLogin } from "../../util/apis";
+import ButtonPrimary from "../UI/ButtonPrimary";
+import ButtonSpinner from "../UI/Spinner/ButtonSpinner";
 
 const Login = () => {
   const usernameRef = useRef();

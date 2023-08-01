@@ -1,9 +1,8 @@
 import { useDispatch } from "react-redux";
-import { ApiDeleteMedia } from "../../util/apis";
-import DeleteModal from "../UI/Forms/DeleteModal";
-import { useNavigate } from "react-router-dom";
 import { homeActions } from "../../store/home-slice";
 import { mediaActions } from "../../store/media-slice";
+import { ApiDeleteMedia } from "../../util/apis";
+import DeleteModal from "../UI/Forms/DeleteModal";
 
 const DeleteForm = function ({ mediaId, action }) {
   const dispatch = useDispatch();

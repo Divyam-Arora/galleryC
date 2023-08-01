@@ -1,26 +1,25 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { IconContext } from "react-icons";
+import { MdShare } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import useHttp from "../../hooks/http-hook";
 import { conversationActions } from "../../store/conversation-slice";
+import { shareActions } from "../../store/share-slice";
 import {
   ApiGetConversationActivity,
   ApiGetConversationDetails,
-  ApiGetConversationMedia,
 } from "../../util/apis";
+import ButtonPrimary from "../UI/ButtonPrimary";
 import Menu from "../UI/Menu";
 import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
+import BackgroundLoader from "../UI/Spinner/BackgroundLoader";
 import classes from "./ConversationContainer.module.css";
 import ConversationHead from "./ConversationHead";
 import ConversationMediaForm from "./ConversationMediaForm";
 import ConversationMediaList from "./ConversationMediaList";
-import LeaveConversationForm from "./LeaveConversationForm";
 import EditGroupMembersForm from "./EditGroupMembersForm";
-import { shareActions } from "../../store/share-slice";
-import BackgroundLoader from "../UI/Spinner/BackgroundLoader";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import { IconContext } from "react-icons";
-import { MdShare } from "react-icons/md";
+import LeaveConversationForm from "./LeaveConversationForm";
 
 const ConversationContainer = function () {
   const { list: conversations } = useSelector((state) => state.share);

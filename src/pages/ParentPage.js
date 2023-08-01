@@ -1,15 +1,13 @@
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Outlet, ScrollRestoration, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import UploadInfo from "../components/Media/UploadInfo";
 import MainHeader from "../components/layout/MainHeader";
 import MainNavigation from "../components/layout/MainNavigation";
-import LoadingSpinner from "../components/UI/LoadingSpinner";
-import NotificationList from "../components/UI/NotificationList";
-import useHttp from "../hooks/http-hook";
-import { ApiGetUserDetails } from "../util/apis";
-import { userDetailActions } from "../store/user-slice";
 import MobileNavigation from "../components/layout/MobileNavigation";
-import UploadInfo from "../components/Media/UploadInfo";
+import useHttp from "../hooks/http-hook";
+import { userDetailActions } from "../store/user-slice";
+import { ApiGetUserDetails } from "../util/apis";
 
 const ParentPage = function (props) {
   const { isLoggedIn } = useSelector((state) => state.auth);

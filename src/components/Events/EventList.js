@@ -1,9 +1,9 @@
 import Event from "./Event";
 
-import classes from "./EventList.module.css";
-import { useNavigate } from "react-router-dom";
 import React from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import classes from "./EventList.module.css";
 
 const EventList = React.memo((props) => {
   const navigate = useNavigate();

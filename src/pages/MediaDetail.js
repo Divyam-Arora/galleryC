@@ -1,16 +1,10 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useMemo } from "react";
-import { API_KEY } from "../util/api-key";
+import { useParams } from "react-router-dom";
 import Media from "../components/Media/Media";
 import useHttp from "../hooks/http-hook";
-import { ApiGetMedia } from "../util/apis";
 import { mediaActions } from "../store/media-slice";
-import LoadingSpinner from "../components/UI/LoadingSpinner";
-import { IconContext } from "react-icons";
-import ButtonPrimary from "../components/UI/ButtonPrimary";
-import { MdInfo, MdShare } from "react-icons/md";
-import Menu from "../components/UI/Menu";
+import { ApiGetMedia } from "../util/apis";
 
 const MediaDetailPage = () => {
   const { data, sendRequest, cleanUp, error, isLoading } = useHttp();

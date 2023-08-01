@@ -1,23 +1,16 @@
-import ButtonPrimary from "../ButtonPrimary";
-import {
-  MdArrowBack,
-  MdClose,
-  MdOutlineImageSearch,
-  MdOutlineImagesearchRoller,
-  MdSearch,
-} from "react-icons/md";
-import classes from "./DateSearch.module.css";
-import { IconContext } from "react-icons";
-import EmptyButton from "./EmptyButton";
 import { useEffect, useRef, useState } from "react";
+import { IconContext } from "react-icons";
+import { MdArrowBack, MdOutlineImageSearch, MdSearch } from "react-icons/md";
+import { useSelector } from "react-redux";
 import useHttp from "../../../hooks/http-hook";
 import {
   ApiGetAllDate,
   ApiGetAllMonth,
   ApiGetAllYear,
 } from "../../../util/apis";
-import { useSelector } from "react-redux";
-import ButtonSpinner from "../Spinner/ButtonSpinner";
+import ButtonPrimary from "../ButtonPrimary";
+import classes from "./DateSearch.module.css";
+import EmptyButton from "./EmptyButton";
 
 const DateSearch = function ({
   action,

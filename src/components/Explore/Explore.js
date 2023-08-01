@@ -1,20 +1,18 @@
+import { useEffect, useState } from "react";
 import {
   Link,
   createSearchParams,
   useLocation,
   useNavigate,
-  useParams,
   useSearchParams,
 } from "react-router-dom";
-import Catagories from "./Catagories";
-import classes from "./Explore.module.css";
-import { useEffect, useState } from "react";
 import useHttp from "../../hooks/http-hook";
-import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
 import { ApiExploreMedia } from "../../util/apis";
 import { getType } from "../../util/helpers";
-import MediaCard from "../UI/MediaCard";
 import EmptyState from "../UI/EmptyState";
+import MediaCard from "../UI/MediaCard";
+import ScrollTriggerContainer from "../UI/ScrollTriggerContainer";
+import classes from "./Explore.module.css";
 
 const targets = [
   { value: "Title", api: "" },

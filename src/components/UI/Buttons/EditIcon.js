@@ -1,9 +1,8 @@
 import { useEffect, useRef } from "react";
-import { useDispatch } from "react-redux";
-import { showNotifications } from "../../../store/notification-actions";
-import ModalSpinner from "../ModalSpinner";
 import { MdEdit } from "react-icons/md";
+import { useDispatch } from "react-redux";
 import useHttp from "../../../hooks/http-hook";
+import { showNotifications } from "../../../store/notification-actions";
 import InlineSpinner from "../Spinner/InlineSpinner";
 
 const EditIcon = function ({ API, action, size = "auto" }) {

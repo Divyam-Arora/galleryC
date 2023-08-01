@@ -1,10 +1,10 @@
+import { useEffect, useRef, useState } from "react";
+import { IconContext } from "react-icons";
 import {
   MdAddCircle,
   MdAddCircleOutline,
-  MdChat,
   MdChatBubble,
   MdChatBubbleOutline,
-  MdFolderShared,
   MdOutlinePhotoAlbum,
   MdOutlinePhotoLibrary,
   MdPeople,
@@ -12,14 +12,11 @@ import {
   MdPhotoAlbum,
   MdPhotoLibrary,
   MdSearch,
-  MdUpload,
 } from "react-icons/md";
-import classes from "./MobileNavigation.module.css";
-import { IconContext } from "react-icons";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
-import Upload from "../Media/Upload";
 import { useSelector } from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
+import Upload from "../Media/Upload";
+import classes from "./MobileNavigation.module.css";
 
 const MobileNavigation = function () {
   const [isMore, setIsMore] = useState(false);

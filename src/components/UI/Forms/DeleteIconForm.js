@@ -1,7 +1,4 @@
 import { useState } from "react";
-import ButtonPrimary from "../ButtonPrimary";
-import Modal from "../Modal";
-import ModalSpinner from "../ModalSpinner";
 import useHttp from "../../../hooks/http-hook";
 import DeleteModal from "./DeleteModal";
 

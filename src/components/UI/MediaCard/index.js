@@ -1,17 +1,7 @@
-import ImageCard from "./ImageCard";
-import VideoCard from "./VideoCard";
-import classes from "./MediaCard.module.css";
-import { IconContext } from "react-icons";
-import { FaPlay, FaPlayCircle, FaRegPlayCircle } from "react-icons/fa";
-import { IoMdPlayCircle } from "react-icons/io";
-import {
-  BsFillPlayCircleFill,
-  BsPlay,
-  BsPlayCircle,
-  BsPlayCircleFill,
-} from "react-icons/bs";
-import { MdOutlinePlayCircle, MdPlayCircle } from "react-icons/md";
 import { useState } from "react";
+import { IconContext } from "react-icons";
+import { BsPlayCircleFill } from "react-icons/bs";
+import classes from "./MediaCard.module.css";
 
 const MediaCard = ({
   type = "",

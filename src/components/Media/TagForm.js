@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import useHttp from "../../hooks/http-hook";
+import useSelection from "../../hooks/selection-hook";
+import { mediaActions } from "../../store/media-slice";
+import { ApiEditMediaTags, ApiGetMediaTags, ApiGetTags } from "../../util/apis";
 import ButtonPrimary from "../UI/ButtonPrimary";
 import Modal from "../UI/Modal";
+import ModalSpinner from "../UI/ModalSpinner";
+import EmptyButton from "../UI/Search/EmptyButton";
 import TextSearch from "../UI/Search/TextSearch";
 import formClasses from "./SelectionForm.module.css";
 import classes from "./TagForm.module.css";
-import useHttp from "../../hooks/http-hook";
-import { ApiEditMediaTags, ApiGetMediaTags, ApiGetTags } from "../../util/apis";
-import { useParams } from "react-router-dom";
-import useSelection from "../../hooks/selection-hook";
-import { MdClose } from "react-icons/md";
-import { IconContext } from "react-icons";
-import EmptyButton from "../UI/Search/EmptyButton";
-import { useDispatch } from "react-redux";
-import { mediaActions } from "../../store/media-slice";
-import ModalSpinner from "../UI/ModalSpinner";
 
 const TagForm = function ({ closeAction }) {
   const { mediaId } = useParams();

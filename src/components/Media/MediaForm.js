@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { homeActions } from "../../store/home-slice";
 import MediaList from "../Media/MediaList";
 import MediaListContainer from "../Media/MediaListContainer";
-import Upload from "../Media/Upload";
 import ButtonPrimary from "../UI/ButtonPrimary";
 import Modal from "../UI/Modal";
 import ModalSpinner from "../UI/ModalSpinner";
 import DateSearch from "../UI/Search/DateSearch";
 
-import classes from "./SelectionForm.module.css";
 import useSelection from "../../hooks/selection-hook";
+import classes from "./SelectionForm.module.css";
 
 const MediaForm = function ({ action, existingList, addAction, isSuccess }) {
   const {

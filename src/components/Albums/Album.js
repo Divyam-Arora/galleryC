@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import MediaCard from "../UI/MediaCard";
 import classes from "./Album.module.css";
 import { MdCheckCircle } from "react-icons/md";

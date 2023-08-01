@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { IconContext } from "react-icons";
 import { MdClose } from "react-icons/md";
 import classes from "./Modal.module.css";

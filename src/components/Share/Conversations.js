@@ -1,18 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
+import useHttp from "../../hooks/http-hook";
+import { conversationActions } from "../../store/conversation-slice";
 import { shareActions } from "../../store/share-slice";
-import PersonHead from "../People/PersonHead";
+import { ApiGetRecentActivity } from "../../util/apis";
 import Menu from "../UI/Menu";
 import TextSearch from "../UI/Search/TextSearch";
 import ConversationList from "./ConversationList";
-import ConversationHead from "./ConversationHead";
-import classes from "./Conversations.module.css";
 import ConversationListContainer from "./ConversationListContainer";
+import classes from "./Conversations.module.css";
 import EditGroupMembersForm from "./EditGroupMembersForm";
-import useHttp from "../../hooks/http-hook";
-import { ApiGetRecentActivity } from "../../util/apis";
-import { conversationActions } from "../../store/conversation-slice";
 
 const Conversations = function () {
   const {

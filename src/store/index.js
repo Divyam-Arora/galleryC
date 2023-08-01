@@ -5,13 +5,13 @@ import authSlice from "./auth-slice";
 import conversationSlice from "./conversation-slice";
 import homeSlice from "./home-slice";
 import httpStateSlice from "./httpState-slice";
+import mediaSlice from "./media-slice";
 import notificationSlice from "./notification-slice";
 import peopleSlice from "./people-slice";
 import personSlice from "./person-slice";
 import shareSlice from "./share-slice";
-import userSlice from "./user-slice";
-import mediaSlice from "./media-slice";
 import uploadSlice from "./upload-slice";
+import userSlice from "./user-slice";
 
 const store = configureStore({
   reducer: {

@@ -1,7 +1,7 @@
+import { MdLocationPin } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import MediaCard from "../UI/MediaCard";
 import classes from "./EventDetail.module.css";
-import { MdLocationPin } from "react-icons/md";
 
 const EventDetail = (props) => {
   const navigate = useNavigate();

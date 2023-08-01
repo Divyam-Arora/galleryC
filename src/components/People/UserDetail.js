@@ -1,16 +1,12 @@
+import { IconContext } from "react-icons";
 import { useDispatch, useSelector } from "react-redux";
+import { personActions } from "../../store/person-slice";
+import { userDetailActions } from "../../store/user-slice";
+import { ApiEditUserIcon } from "../../util/apis";
+import DeleteIcon from "../UI/Buttons/DeleteIcon";
+import EditIcon from "../UI/Buttons/EditIcon";
 import MediaCard from "../UI/MediaCard";
 import classes from "./UserDetail.module.css";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import { MdLogout } from "react-icons/md";
-import { IconContext } from "react-icons";
-import { authActions } from "../../store/auth-slice";
-import { logout } from "../../store/auth-actions";
-import EditIcon from "../UI/Buttons/EditIcon";
-import DeleteIcon from "../UI/Buttons/DeleteIcon";
-import { ApiEditUserIcon } from "../../util/apis";
-import { userDetailActions } from "../../store/user-slice";
-import { personActions } from "../../store/person-slice";
 
 const UserDetail = function () {
   const { item: user } = useSelector((state) => state.person);

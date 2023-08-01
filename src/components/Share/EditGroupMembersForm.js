@@ -1,26 +1,24 @@
 import { useEffect, useState } from "react";
-import useSelection from "../../hooks/selection-hook";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import Modal from "../UI/Modal";
 import { useDispatch, useSelector } from "react-redux";
-import PeopleListContainer from "../People/PeopleListContainer";
-import ConversationList from "./ConversationList";
-import PersonHead from "../People/PersonHead";
-import TextSearch from "../UI/Search/TextSearch";
-import classes from "./NewGroupForm.module.css";
-import ModalSpinner from "../UI/ModalSpinner";
-import UserModalSpinner from "../layout/UserModalSpinner";
-import { peopleActions } from "../../store/people-slice";
+import { useParams } from "react-router-dom";
 import useHttp from "../../hooks/http-hook";
+import useSelection from "../../hooks/selection-hook";
+import { conversationActions } from "../../store/conversation-slice";
+import { showNotifications } from "../../store/notification-actions";
+import { peopleActions } from "../../store/people-slice";
+import { shareActions } from "../../store/share-slice";
 import {
   ApiEditConversationMembers,
   ApiGetAllConversationMembers,
 } from "../../util/apis";
-import { shareActions } from "../../store/share-slice";
-import { notificationActions } from "../../store/notification-slice";
-import { showNotifications } from "../../store/notification-actions";
-import { useParams } from "react-router-dom";
-import { conversationActions } from "../../store/conversation-slice";
+import PeopleListContainer from "../People/PeopleListContainer";
+import PersonHead from "../People/PersonHead";
+import ButtonPrimary from "../UI/ButtonPrimary";
+import Modal from "../UI/Modal";
+import ModalSpinner from "../UI/ModalSpinner";
+import TextSearch from "../UI/Search/TextSearch";
+import UserModalSpinner from "../layout/UserModalSpinner";
+import classes from "./NewGroupForm.module.css";
 
 const EditGroupMembersForm = function ({ closeAction, isNewGroup = true }) {
   const [existingList, setExistingList] = useState([]);

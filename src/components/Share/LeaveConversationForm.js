@@ -1,13 +1,8 @@
-import { useState } from "react";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import Modal from "../UI/Modal";
-import useHttp from "../../hooks/http-hook";
-import { ApiLeaveConversation } from "../../util/apis";
 import { useDispatch } from "react-redux";
-import { shareActions } from "../../store/share-slice";
 import { useNavigate } from "react-router-dom";
-import ModalSpinner from "../UI/ModalSpinner";
 import { conversationActions } from "../../store/conversation-slice";
+import { shareActions } from "../../store/share-slice";
+import { ApiLeaveConversation } from "../../util/apis";
 import DeleteModal from "../UI/Forms/DeleteModal";
 
 const LeaveConversationForm = function ({ conversationId, leaveAction }) {

@@ -1,22 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  BrowserRouter,
-  RouterProvider,
-  createBrowserRouter,
-} from "react-router-dom";
 import { Provider } from "react-redux";
-import "./index.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import "./queries.css";
-import store from "./store";
-import * as Pages from "./pages";
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-import reportWebVitals from "./reportWebVitals";
-import ParentPage from "./pages/ParentPage";
-import { AuthPage } from "./pages";
 import Login from "./components/auth/Login";
 import Signup from "./components/auth/Signup";
+import "./index.css";
+import * as Pages from "./pages";
+import ParentPage from "./pages/ParentPage";
+import "./queries.css";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import store from "./store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([

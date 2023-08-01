@@ -1,18 +1,15 @@
-import moment from "moment";
+import { useEffect, useState } from "react";
+import { IconContext } from "react-icons";
 import { BsDot } from "react-icons/bs";
+import { MdCheckCircle, MdEdit } from "react-icons/md";
 import { useSelector } from "react-redux";
+import { ApiUserIcon } from "../../util/apis";
+import { getActivityText, getUserSubject } from "../../util/helpers";
 import MediaCard from "../UI/MediaCard";
 import classes from "./ConversationHead.module.css";
-import { MdCheckCircle, MdDelete, MdEdit, MdPerson } from "react-icons/md";
-import { IconContext } from "react-icons";
-import { useEffect, useState } from "react";
-import GroupNameForm from "./GroupNameForm";
-import { ApiUserIcon } from "../../util/apis";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import EditGroupIconForm from "./EditGroupIconForm";
-import DeleteGroupIcon from "./DeleteGroupIcon";
-import { getActivityText, getUserSubject } from "../../util/helpers";
 import DeleteGroupIconForm from "./DeleteGroupIconForm";
+import EditGroupIconForm from "./EditGroupIconForm";
+import GroupNameForm from "./GroupNameForm";
 
 const ConversationHead = function ({
   name,

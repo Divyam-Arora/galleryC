@@ -1,16 +1,12 @@
-import { MdArrowBack, MdClose, MdSearch } from "react-icons/md";
 import { IconContext } from "react-icons";
+import { MdArrowBack, MdSearch } from "react-icons/md";
 
-import classes from "./TextSearch.module.css";
-import ButtonPrimary from "../ButtonPrimary";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { showNotifications } from "../../../store/notification-actions";
-import EmptyButton from "./EmptyButton";
-import Dropdown from "./Dropdown";
-import UserModalSpinner from "../../layout/UserModalSpinner";
-import ModalSpinner from "../ModalSpinner";
 import InlineSpinner from "../Spinner/InlineSpinner";
+import Dropdown from "./Dropdown";
+import EmptyButton from "./EmptyButton";
+import classes from "./TextSearch.module.css";
 
 const formatInput = (value = "") => {
   return value

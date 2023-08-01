@@ -1,13 +1,11 @@
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import ConversationMedia from "../Share/ConversationMedia";
+import ButtonPrimary from "../UI/ButtonPrimary";
 import MediaCard from "../UI/MediaCard";
 import classes from "./PersonDetail.module.css";
-import PersonHead from "./PersonHead";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import { useState } from "react";
 import SharedGroups from "./SharedGroups";
-import ConversationMedia from "../Share/ConversationMedia";
-import { ApiGetPersonSharedGroups } from "../../util/apis";
 
 const PersonDetail = function () {
   const { item: person, list: sharedMedia } = useSelector(

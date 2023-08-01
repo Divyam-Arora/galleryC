@@ -1,8 +1,8 @@
 import { useState } from "react";
+import useHttp from "../../../hooks/http-hook";
 import ButtonPrimary from "../ButtonPrimary";
 import Modal from "../Modal";
 import ModalSpinner from "../ModalSpinner";
-import useHttp from "../../../hooks/http-hook";
 
 const DeleteModal = function ({ API, action, tag, target, text = "" }) {
   const [toClose, setToClose] = useState(false);

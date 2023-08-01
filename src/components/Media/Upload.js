@@ -1,20 +1,16 @@
-import { useEffect, useReducer, useRef, useState } from "react";
+import { useEffect, useReducer, useRef } from "react";
 import { IconContext } from "react-icons";
 import { MdOutlineFileUpload } from "react-icons/md";
-import { IoMdArrowRoundUp } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import useHttp from "../../hooks/http-hook";
 import { homeActions } from "../../store/home-slice";
 import { showNotifications } from "../../store/notification-actions";
-import { notificationActions } from "../../store/notification-slice";
-import { ApiUploadMedia } from "../../util/apis";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import UploadSpinner from "../UI/Spinner/UploadSpinner";
-import classes from "./Upload.module.css";
-import moment from "moment";
 import { uploadActions } from "../../store/upload-slice";
 import { uploadAction } from "../../util/actions";
+import { ApiUploadMedia } from "../../util/apis";
 import { maxImageSize, maxVideoSize } from "../../util/helpers";
+import ButtonPrimary from "../UI/ButtonPrimary";
+import classes from "./Upload.module.css";
 
 const initFiles = [];
 const filesReducer = (state, action) => {

@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import PersonHead from "../People/PersonHead";
-import ButtonPrimary from "../UI/ButtonPrimary";
 import MediaCard from "../UI/MediaCard";
-import ConversationHead from "./ConversationHead";
 import classes from "./ConversationMedia.module.css";
 
 const ConversationMedia = function ({ media, owner, date }) {

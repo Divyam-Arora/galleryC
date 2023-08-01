@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-import classes from "./SelectionForm.module.css";
-import Modal from "../UI/Modal";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import AlbumListContainer from "../Albums/AlbumListContainer";
-import AlbumList from "../Albums/AlbumList";
-import { useDispatch, useSelector } from "react-redux";
-import useSelection from "../../hooks/selection-hook";
-import useHttp from "../../hooks/http-hook";
-import { useParams } from "react-router-dom";
-import { ApiEditMediaAlbums, ApiGetAllMediaAlbums } from "../../util/apis";
-import TextSearch from "../UI/Search/TextSearch";
-import { albumsActions } from "../../store/albums-slice";
-import AlbumForm from "../Albums/AlbumForm";
-import { mediaActions } from "../../store/media-slice";
-import ModalSpinner from "../UI/ModalSpinner";
-import { albumActions } from "../../store/album-slice";
 import { MdAdd } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import useHttp from "../../hooks/http-hook";
+import useSelection from "../../hooks/selection-hook";
+import { albumActions } from "../../store/album-slice";
+import { albumsActions } from "../../store/albums-slice";
+import { mediaActions } from "../../store/media-slice";
+import { ApiEditMediaAlbums, ApiGetAllMediaAlbums } from "../../util/apis";
+import AlbumForm from "../Albums/AlbumForm";
+import AlbumList from "../Albums/AlbumList";
+import AlbumListContainer from "../Albums/AlbumListContainer";
+import ButtonPrimary from "../UI/ButtonPrimary";
+import Modal from "../UI/Modal";
+import ModalSpinner from "../UI/ModalSpinner";
+import TextSearch from "../UI/Search/TextSearch";
+import classes from "./SelectionForm.module.css";
 
 function AlbumsForm({ closeAction }) {
   const [viewSelected, setViewSelected] = useState(false);

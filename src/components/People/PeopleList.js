@@ -1,9 +1,8 @@
 import PeopleItem from "./PeopleItem";
 
-import classes from "./PeopleList.module.css";
-import dummy from "../../dummy.png";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import classes from "./PeopleList.module.css";
 
 const PeopleList = (props) => {
   const people = useSelector((state) => state.people);

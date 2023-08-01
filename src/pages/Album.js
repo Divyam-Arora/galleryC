@@ -1,28 +1,19 @@
-import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { MdSearch } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import AlbumDetail from "../components/Albums/AlbumDetail";
-import useHttp from "../hooks/http-hook";
-import { ApiGetAlbum, ApiGetAlbumMedia } from "../util/apis";
-import ButtonPrimary from "../components/UI/ButtonPrimary";
-import {
-  MdAdd,
-  MdAddPhotoAlternate,
-  MdDelete,
-  MdOutlineAddPhotoAlternate,
-  MdSearch,
-} from "react-icons/md";
-import { IconContext } from "react-icons";
-import DeleteForm from "../components/Albums/DeleteForm";
-import { albumsActions } from "../store/albums-slice";
 import AlbumMediaForm from "../components/Albums/AlbumMediaForm";
-import Menu from "../components/UI/Menu";
+import DeleteForm from "../components/Albums/DeleteForm";
 import EditForm from "../components/Albums/EditForm";
-import { albumActions } from "../store/album-slice";
+import EmptyState from "../components/UI/EmptyState";
+import Menu from "../components/UI/Menu";
 import ScrollTriggerContainer from "../components/UI/ScrollTriggerContainer";
 import TextSearch from "../components/UI/Search/TextSearch";
-import EmptyState from "../components/UI/EmptyState";
 import BackgroundLoader from "../components/UI/Spinner/BackgroundLoader";
+import useHttp from "../hooks/http-hook";
+import { albumActions } from "../store/album-slice";
+import { ApiGetAlbum, ApiGetAlbumMedia } from "../util/apis";
 
 const AlbumPage = ({ items }) => {
   const [isDeleting, setIsDeleting] = useState(false);

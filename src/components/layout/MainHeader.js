@@ -1,16 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import classes from "./MainHeader.module.css";
-import { useEffect, useRef, useState } from "react";
-import UserModal from "./UserModal";
-import Upload from "../Media/Upload";
-import MediaCard from "../UI/MediaCard";
-import { userDetailActions } from "../../store/user-slice";
-import DeleteIconForm from "../UI/Forms/DeleteIconForm";
-import { ApiEditUserIcon } from "../../util/apis";
-import DeleteModal from "../UI/Forms/DeleteModal";
+import { useRef, useState } from "react";
 import logo from "../../Images/android-chrome-512x512.png";
-import { personActions } from "../../store/person-slice";
+import { userDetailActions } from "../../store/user-slice";
+import { ApiEditUserIcon } from "../../util/apis";
+import Upload from "../Media/Upload";
+import DeleteModal from "../UI/Forms/DeleteModal";
+import MediaCard from "../UI/MediaCard";
+import classes from "./MainHeader.module.css";
+import UserModal from "./UserModal";
 
 const MainHeader = (props) => {
   const headerRef = useRef();

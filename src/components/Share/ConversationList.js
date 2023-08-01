@@ -1,5 +1,5 @@
-import classes from "./ConversationList.module.css";
 import ConversationHead from "./ConversationHead";
+import classes from "./ConversationList.module.css";
 
 const ConversationList = function ({
   conversations = [],

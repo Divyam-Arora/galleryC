@@ -1,9 +1,9 @@
+import { IconContext } from "react-icons";
+import { BsDot } from "react-icons/bs";
+import { MdCheckCircle } from "react-icons/md";
 import { useSelector } from "react-redux";
 import MediaCard from "../UI/MediaCard";
 import classes from "./PersonHead.module.css";
-import { BsDot } from "react-icons/bs";
-import { MdCheckCircle } from "react-icons/md";
-import { IconContext } from "react-icons";
 
 const PersonHead = function ({
   url,

@@ -1,22 +1,16 @@
 import { useEffect, useRef } from "react";
+import { IconContext } from "react-icons";
+import { MdDelete } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import useHttp from "../../hooks/http-hook";
-import { albumsActions } from "../../store/albums-slice";
 import { logout } from "../../store/auth-actions";
-import { authActions } from "../../store/auth-slice";
-import { homeActions } from "../../store/home-slice";
-import { peopleActions } from "../../store/people-slice";
 import { userDetailActions } from "../../store/user-slice";
 import { ApiEditUserIcon, ApiGetUserDetails } from "../../util/apis";
 import ButtonPrimary from "../UI/ButtonPrimary";
+import EditIcon from "../UI/Buttons/EditIcon";
+import MediaCard from "../UI/MediaCard";
 import classes from "./UserModal.module.css";
 import UserModalSpinner from "./UserModalSpinner";
-import MediaCard from "../UI/MediaCard";
-import EditIcon from "../UI/Buttons/EditIcon";
-import DeleteIcon from "../UI/Buttons/DeleteIcon";
-import { IconContext } from "react-icons";
-import { MdDelete } from "react-icons/md";
-import { personActions } from "../../store/person-slice";
 
 const UserModal = (props) => {
   const dispatch = useDispatch();

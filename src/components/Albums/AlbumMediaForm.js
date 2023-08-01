@@ -3,20 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import useHttp from "../../hooks/http-hook";
 import { albumActions } from "../../store/album-slice";
 import { albumsActions } from "../../store/albums-slice";
-import { homeActions } from "../../store/home-slice";
-import {
-  ApiEditAlbumMedia,
-  ApiGetAllAlbumMedia,
-  ApiGetAllMedia,
-} from "../../util/apis";
+import { ApiEditAlbumMedia, ApiGetAllAlbumMedia } from "../../util/apis";
 import MediaForm from "../Media/MediaForm";
-import MediaList from "../Media/MediaList";
-import MediaListContainer from "../Media/MediaListContainer";
-import Upload from "../Media/Upload";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import Modal from "../UI/Modal";
-import ModalSpinner from "../UI/ModalSpinner";
-import DateSearch from "../UI/Search/DateSearch";
 
 const AlbumMediaForm = function ({ addAction }) {
   const [toAdd, setToAdd] = useState(new Map());

@@ -1,22 +1,16 @@
+import React from "react";
+import { IconContext } from "react-icons";
+import { MdCollections, MdImage, MdSearch, MdVideocam } from "react-icons/md";
+import { useSelector } from "react-redux";
 import {
   createSearchParams,
   useLocation,
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
-import { useSelector } from "react-redux";
-import React, { useEffect, useState } from "react";
 import Explore from "../components/Explore/Explore";
-import TextSearch from "../components/UI/Search/TextSearch";
 import ButtonPrimary from "../components/UI/ButtonPrimary";
-import {
-  MdCollections,
-  MdImage,
-  MdPlayArrow,
-  MdSearch,
-  MdVideocam,
-} from "react-icons/md";
-import { IconContext } from "react-icons";
+import TextSearch from "../components/UI/Search/TextSearch";
 import { getType } from "../util/helpers";
 
 const ExplorePage = React.memo(() => {

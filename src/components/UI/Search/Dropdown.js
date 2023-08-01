@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import classes from "./Dropdown.module.css";
-import { MdAdd, MdTransitEnterexit } from "react-icons/md";
 import { IconContext } from "react-icons";
+import { MdAdd } from "react-icons/md";
+import classes from "./Dropdown.module.css";
 function Dropdown({ list, action }) {
   const ulRef = useRef();
   const liRef = useRef();

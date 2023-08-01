@@ -1,26 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { IconContext } from "react-icons";
-import {
-  MdArrowBack,
-  MdArrowForward,
-  MdArrowForwardIos,
-  MdExitToApp,
-  MdKeyboardArrowRight,
-} from "react-icons/md";
+import { MdExitToApp, MdKeyboardArrowRight } from "react-icons/md";
+import { useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import useHttp from "../../hooks/http-hook";
 import { ApiGetConversationInfo } from "../../util/apis";
-import ButtonPrimary from "../UI/ButtonPrimary";
-import containerClasses from "./ConversationContainer.module.css";
-import classes from "./ConversationInfo.module.css";
-import ConversationHead from "./ConversationHead";
-import ConversationMedia from "./ConversationMedia";
 import PersonHead from "../People/PersonHead";
-import PeopleItem from "../People/PeopleItem";
 import BackButton from "../UI/BackButton";
-import { useSelector } from "react-redux";
-import LeaveConversationForm from "./LeaveConversationForm";
+import ButtonPrimary from "../UI/ButtonPrimary";
 import EmptyState from "../UI/EmptyState";
+import containerClasses from "./ConversationContainer.module.css";
+import ConversationHead from "./ConversationHead";
+import classes from "./ConversationInfo.module.css";
+import ConversationMedia from "./ConversationMedia";
+import LeaveConversationForm from "./LeaveConversationForm";
 
 const ConversationInfo = function () {
   const containerRef = useRef();
