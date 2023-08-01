@@ -15,7 +15,6 @@ import {
   useNavigate,
   useParams,
 } from "react-router-dom";
-import "video.js/dist/video-js.css";
 import { ApiBasePublicUrl } from "../../util/apis";
 import Album from "../Albums/Album";
 import ConversationHead from "../Share/ConversationHead";
