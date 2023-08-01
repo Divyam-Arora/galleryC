@@ -6,7 +6,7 @@ const Auth = function (props) {
   return (
     <section className={`${classes.section}`}>
       <div className={classes.head}>
-        <img src={logo} />
+        <img src={logo} alt="my gallerie logo" />
         <h1 className={`${classes["big-logo"]}`}>My Gallerie</h1>
       </div>
       <Outlet />

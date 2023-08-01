@@ -63,7 +63,7 @@ const MainHeader = (props) => {
       }
     >
       <div className={`flex-row ${classes.logo}`}>
-        <img src={logo} />
+        <img src={logo} alt="my gallerie logo" />
         <h1 className="heading-primary">My Gallerie</h1>
       </div>
       {isLoggedIn && (
