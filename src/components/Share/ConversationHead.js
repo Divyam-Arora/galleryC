@@ -99,7 +99,7 @@ const ConversationHead = function ({
       >
         {iconURL ? (
           <MediaCard alt={name || "group"} shape="circle" url={iconURL} />
-        ) : (
+        ) : members.length > 0 ? (
           members.slice(0, 2).map((member) => {
             if (member.iconThumbnail) {
               return (
@@ -120,6 +120,8 @@ const ConversationHead = function ({
               );
             }
           })
+        ) : (
+          <MediaCard alt="!" shape="circle" />
         )}
         {type == "profile" && isGroup && (
           <span className={classes.edit}>
@@ -152,7 +154,7 @@ const ConversationHead = function ({
               <p>
                 {getActivityText(
                   lastActivity.action,
-                  getUserSubject(userName, lastActivity.by, isGroup),
+                  getUserSubject(userName, lastActivity.by, isGroup, action),
                   lastActivity.targetId,
                   lastActivity.targetString
                 )}
@@ -196,7 +198,9 @@ const ConversationHead = function ({
               <strong>{getConversationHead()}</strong>
             </p>
             {!isGroup ? (
-              <p>{`${members?.[0]?.firstName} ${members?.[0]?.lastName}`}</p>
+              memberCount > 0 && (
+                <p>{`${members?.[0]?.firstName} ${members?.[0]?.lastName}`}</p>
+              )
             ) : (
               <p>{memberCount + " members"}</p>
             )}

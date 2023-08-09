@@ -141,10 +141,13 @@
     border-radius: 5px;
   }
   .psedu {
-    height: 30vh;
+    height: 60vh;
   }
   .title {
     font-size: 2rem;
+  }
+  .listContainer > div:first-child {
+    justify-content: space-between;
   }
   .conversations {
     grid-template-columns: 1fr !important;

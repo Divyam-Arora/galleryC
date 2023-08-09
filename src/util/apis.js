@@ -109,10 +109,11 @@ export const ApiGetAllConversations = (
   page = 0,
   extra = 0,
   search = "",
-  recent = 0
+  recent = 0,
+  active = false
 ) =>
   ApiBasePrivateUrl +
-  `conversation?page=${page}&extra=${extra}&search=${search}&recent=${recent}`;
+  `conversation?page=${page}&extra=${extra}&search=${search}&recent=${recent}&active=${active}`;
 
 export const ApiGetConversationDetails = (conversationId = 0) =>
   ApiBasePrivateUrl + `conversation/${conversationId}`;

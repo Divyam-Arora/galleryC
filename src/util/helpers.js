@@ -12,10 +12,15 @@ export const actions = {
   Left: "Left",
 };
 
-export const getUserSubject = (loggedUser, username, isGroup = false) => {
+export const getUserSubject = (
+  loggedUser,
+  username,
+  isGroup = false,
+  action
+) => {
   let subject = username;
   if (username == loggedUser) subject = "You";
-  else if (!isGroup) subject = "";
+  else if (!isGroup && action != actions.Left) subject = "";
 
   return subject;
 };

@@ -76,46 +76,48 @@ const PersonDetail = function () {
           </div>
         </div>
       </div>
-      <div className={`flex-column ${classes["media-container"]}`}>
-        <h2 className="heading-secondary">Shared Media</h2>
-        <ul className="grid">
-          {sharedMedia.map((m) => (
-            <li key={m.id} className="flex-column position-relative">
-              <Link to={`/media/${m.id}`}>
-                <ConversationMedia
-                  media={m}
-                  date={m.sharedOn}
-                  owner={m.owner}
-                />
-              </Link>
-              {m.conversationCount && (
-                <span className={classes.conversation}>
-                  <ButtonPrimary
-                    style={"inline"}
-                    disabled={!m?.conversationCount}
-                    type={"button"}
-                    onClick={() => {
-                      setGroupModal({
-                        isOpen: true,
-                        type: "sharedMediaConversations",
-                        options: {
-                          ...groupModal.options,
-                          mediaId: m.id,
-                          owner: m.owner.username,
-                        },
-                      });
-                    }}
-                  >
-                    {`${m.conversationCount} conversation${
-                      m.conversationCount == 1 ? "" : "s"
-                    }`}
-                  </ButtonPrimary>
-                </span>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {sharedMedia.length > 0 && (
+        <div className={`flex-column ${classes["media-container"]}`}>
+          <h2 className="heading-secondary">Shared Media</h2>
+          <ul className="grid">
+            {sharedMedia.map((m) => (
+              <li key={m.id} className="flex-column position-relative">
+                <Link to={`/media/${m.id}`}>
+                  <ConversationMedia
+                    media={m}
+                    date={m.sharedOn}
+                    owner={m.owner}
+                  />
+                </Link>
+                {m.conversationCount && (
+                  <span className={classes.conversation}>
+                    <ButtonPrimary
+                      style={"inline"}
+                      disabled={!m?.conversationCount}
+                      type={"button"}
+                      onClick={() => {
+                        setGroupModal({
+                          isOpen: true,
+                          type: "sharedMediaConversations",
+                          options: {
+                            ...groupModal.options,
+                            mediaId: m.id,
+                            owner: m.owner.username,
+                          },
+                        });
+                      }}
+                    >
+                      {`${m.conversationCount} conversation${
+                        m.conversationCount == 1 ? "" : "s"
+                      }`}
+                    </ButtonPrimary>
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       {groupModal.isOpen && (
         <SharedGroups
           closeAction={closeGroupsAction}

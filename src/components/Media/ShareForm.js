@@ -61,7 +61,7 @@ const ShareForm = function ({ closeAction }) {
 
   useEffect(() => {
     conversationRequest.sendRequest(
-      ApiGetAllConversations(0, 0, search),
+      ApiGetAllConversations(0, 0, search, 0, true),
       "GET",
       {},
       {},
