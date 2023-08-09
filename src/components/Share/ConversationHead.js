@@ -121,7 +121,7 @@ const ConversationHead = function ({
             }
           })
         ) : (
-          <MediaCard alt="!" shape="circle" />
+          <MediaCard alt="!" shape="circle" fontSize="4rem" />
         )}
         {type == "profile" && isGroup && (
           <span className={classes.edit}>
