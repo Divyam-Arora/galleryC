@@ -154,7 +154,12 @@ const ConversationHead = function ({
               <p>
                 {getActivityText(
                   lastActivity.action,
-                  getUserSubject(userName, lastActivity.by, isGroup, action),
+                  getUserSubject(
+                    userName,
+                    lastActivity.by,
+                    isGroup,
+                    lastActivity.action
+                  ),
                   lastActivity.targetId,
                   lastActivity.targetString
                 )}
