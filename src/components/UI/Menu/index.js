@@ -1,6 +1,13 @@
 import { useRef, useState } from "react";
 import { IconContext } from "react-icons";
-import { MdAdd, MdDelete, MdEdit, MdInfo, MdShare } from "react-icons/md";
+import {
+  MdAdd,
+  MdDelete,
+  MdEdit,
+  MdExitToApp,
+  MdInfo,
+  MdShare,
+} from "react-icons/md";
 import ButtonPrimary from "../ButtonPrimary";
 import KebabButton from "./KebabButton";
 import classes from "./Menu.module.css";
@@ -15,6 +22,7 @@ const icons = {
   edit: <MdEdit />,
   share: <MdShare />,
   info: <MdInfo />,
+  Leave: <MdExitToApp />,
 };
 
 const Menu = function ({ menuItems = {} }) {
