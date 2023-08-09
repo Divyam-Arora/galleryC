@@ -203,7 +203,7 @@ const ConversationHead = function ({
               <strong>{getConversationHead()}</strong>
             </p>
             {!isGroup ? (
-              memberCount > 0 && (
+              members.length > 0 && (
                 <p>{`${members?.[0]?.firstName} ${members?.[0]?.lastName}`}</p>
               )
             ) : (
